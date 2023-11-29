@@ -41,15 +41,14 @@ var bookList = [
     imageAsset: 'images/5-am-club.webp',
   ),
   Book(
-    name: 'Atomic Habits',
-    author: 'James Clear',
-    shortDescription:
-        'An Easy & Proven Way to Build Good Habits & Break Bad Ones',
-    rating: '4.7',
-    category: 'Routines & Habits',
+    name: 'The 4-Hour Workweek',
+    author: 'Tim Ferriss',
+    shortDescription: 'Escape 9–5, Live Anywhere, and Join the New Rich',
+    rating: '4.2',
+    category: 'Career & Success',
     description:
-        "'Atomic Habits' by James Clear is a practical guide on developing sustainable habits. It encourages small, consistent changes that can lead to immense personal growth.",
-    imageAsset: 'images/atomic_habits.webp',
+        "The 4-Hour Workweek (2009) describes the life of the New Rich, people who’ve emancipated themselves from the slavery of office work and built a life centered around happiness in the here and now. If you want to lead such a life too, you’ll have to start by being more productive and finding a source of continuous – and almost entirely passive – income. These blinks will show you how.",
+    imageAsset: 'images/4-hour.webp',
   ),
   Book(
     name: 'Human Compatible',
