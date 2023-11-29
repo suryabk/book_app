@@ -18,7 +18,7 @@ class Book {
   });
 }
 
-var bookList = [
+final bookList = [
   Book(
     name: 'Atomic Habits',
     author: 'James Clear',
