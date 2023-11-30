@@ -1,3 +1,4 @@
+import 'package:book_app/components/bookmark.dart';
 import 'package:book_app/model/book_data.dart';
 import 'package:flutter/material.dart';
 
@@ -8,22 +9,22 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Detail Book')),
-        body: ListView(
-          children: <Widget>[
-            Image(
-              image: AssetImage(book.imageAsset),
-              height: 200,
-            ),
-            Expanded(
-                flex: 2,
-                child: BookData(
-                    title: book.name,
-                    author: book.author,
-                    shortDesc: book.shortDescription,
-                    summary: book.description)),
-          ],
-        ));
+      appBar: AppBar(title: const Text('Detail Book')),
+      body: ListView(
+        children: <Widget>[
+          Image(
+            image: AssetImage(book.imageAsset),
+            height: 200,
+          ),
+          BookData(
+              title: book.name,
+              author: book.author,
+              shortDesc: book.shortDescription,
+              summary: book.description),
+        ],
+      ),
+      floatingActionButton: const BookmarkButton(),
+    );
   }
 }
 
@@ -89,6 +90,7 @@ class BookData extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 summary,
+                textAlign: TextAlign.justify,
                 style: const TextStyle(
                   fontSize: 16,
                   fontFamily: 'Nunito',
