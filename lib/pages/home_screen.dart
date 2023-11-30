@@ -34,9 +34,13 @@ class BookList extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Expanded(flex: 2, child: Image.asset(book.imageAsset)),
                 Expanded(
-                    flex: 3,
+                    flex: 1,
+                    child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Image.asset(book.imageAsset))),
+                Expanded(
+                    flex: 2,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -46,19 +50,21 @@ class BookList extends StatelessWidget {
                             book.name,
                             style: const TextStyle(
                                 fontSize: 18.0,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w700),
+                                fontFamily: 'Nunito',
+                                fontWeight: FontWeight.w800),
                           ),
                           Container(
                               margin: const EdgeInsets.only(bottom: 8),
                               child: Text(
                                 book.author,
-                                style: const TextStyle(fontFamily: 'Poppins'),
+                                style: const TextStyle(
+                                    fontFamily: 'Nunito',
+                                    fontStyle: FontStyle.italic),
                               )),
                           Text(
                             book.shortDescription,
                             style: const TextStyle(
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Nunito',
                                 fontWeight: FontWeight.w300),
                           )
                         ],
