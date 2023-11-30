@@ -37,7 +37,7 @@ class BookList extends StatelessWidget {
                 Expanded(
                     flex: 1,
                     child: Padding(
-                        padding: const EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(8),
                         child: Image.asset(book.imageAsset))),
                 Expanded(
                     flex: 2,
