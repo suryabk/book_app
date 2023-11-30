@@ -10,25 +10,18 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: const Text('Detail Book')),
         body: ListView(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(24, 8, 24, 8),
-                      child: Image.asset(book.imageAsset),
-                    )),
-                Expanded(
-                    flex: 2,
-                    child: BookData(
-                        title: book.name,
-                        author: book.author,
-                        shortDesc: book.shortDescription,
-                        summary: book.description))
-              ],
+          children: <Widget>[
+            Image(
+              image: AssetImage(book.imageAsset),
+              height: 200,
             ),
+            Expanded(
+                flex: 2,
+                child: BookData(
+                    title: book.name,
+                    author: book.author,
+                    shortDesc: book.shortDescription,
+                    summary: book.description)),
           ],
         ));
   }
